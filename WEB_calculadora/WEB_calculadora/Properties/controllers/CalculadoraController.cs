@@ -57,13 +57,20 @@ namespace WEB_calculadora.Properties.controllers
         [Route("division")]
         public float divisionget(int num1, int num2)
         {
-            return num1 / num2;
+            if (num2 == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return num1 / num2;
+            }
         }
         [HttpPost]
         [Route("division")]
         public float divisionpost([FromHeader] int num1, [FromHeader] int num2)
         {
-            return num1 / num2;
+           return num1 / num2; 
         }
         //------------------------------------------
     }
