@@ -10,22 +10,20 @@ namespace WEB_calculadora.Properties.controllers
     [Route("api/[controller]")]
     public class CalculadoraController : ControllerBase
     {
-     
         //------------------------------------
-        // GET y POST de MULTIPLICACION
+        // GET y POST de DIVISION
         [HttpGet]
-        [Route("multiplicacion")]
-        public int multiplicacionget(int num1, int num2)
+        [Route("division")]
+        public float divisionget(int num1, int num2)
         {
-            return num1 * num2;
+            return num1 / num2;
         }
         [HttpPost]
-        [Route("multiplicacion")]
-        public int multiplicacionpost([FromHeader] int num1, [FromHeader] int num2)
+        [Route("division")]
+        public float divisionpost([FromHeader] int num1, [FromHeader] int num2)
         {
-            return num1 * num2;
+            return num1 / num2;
         }
-        //------------------------------------
-       
+        //------------------------------------------
     }
 }
