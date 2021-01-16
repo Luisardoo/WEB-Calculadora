@@ -10,18 +10,18 @@ namespace NUnitTestCalculadora
         {
         }
         //-----------------------------------------------------------
-        // UNITtest RESTA POST
+        // UNITtest MULTIPLICACION POST
         // POST 1
         [Test]
-        public void TestRestaPOST1()
+        public void TestMultiplicacionPOST1()
         {
             // Arrange = preparacion
-            int num1 = 30;
-            int num2 = 7;
-            int esperado = 23;
+            int num1 = 12;
+            int num2 = 12;
+            int esperado = 144;
             CalculadoraController calc = new CalculadoraController();
             // Act = ejecucion
-            int resultado = calc.restapost(num1, num2);
+            int resultado = calc.multiplicacionpost(num1, num2);
             // Assert = verificacion
             Assert.AreEqual(esperado, resultado);
 
@@ -29,15 +29,15 @@ namespace NUnitTestCalculadora
         //-----------------------------------------------------------
         // POST 2
         [Test]
-        public void TestRestaPOST2()
+        public void TestMultiplicacionPOST2()
         {
             // Arrange = preparacion
-            int num1 = 25;
-            int num2 = -25;
-            int esperado = 50;
+            int num1 = 10;
+            int num2 = 10;
+            int esperado = 100;
             CalculadoraController calc = new CalculadoraController();
             // Act = ejecucion
-            int resultado = calc.restapost(num1, num2);
+            int resultado = calc.multiplicacionpost(num1, num2);
             // Assert = verificacion
             Assert.AreEqual(esperado, resultado);
 
@@ -45,32 +45,32 @@ namespace NUnitTestCalculadora
         //-----------------------------------------------------------
         // POST 3
         [Test]
-        public void TestRestaPOST3()
+        public void TestMultiplicacionPOST3()
         {
             // Arrange = preparacion
-            int num1 = 75;
-            int num2 = 19;
-            int esperado = 56;
+            int num1 = 5;
+            int num2 = 7;
+            int esperado = 35;
             CalculadoraController calc = new CalculadoraController();
             // Act = ejecucion
-            int resultado = calc.restapost(num1, num2);
+            int resultado = calc.multiplicacionpost(num1, num2);
             // Assert = verificacion
             Assert.AreEqual(esperado, resultado);
 
         }
         //-----------------------------------------------------------
-        // UNITtest RESTA GET
+        // UNITtest MULTIPLICACION GET
         // GET 1
         [Test]
-        public void TestRestaGET1()
+        public void TestMultiplicacionGET1()
         {
             // Arrange = preparacion
-            int num1 = 40;
-            int num2 = 20;
-            int esperado = 20;
+            int num1 = 2;
+            int num2 = 2;
+            int esperado = 4;
             CalculadoraController calc = new CalculadoraController();
             // Act = ejecucion
-            int resultado = calc.restaget(num1, num2);
+            int resultado = calc.multiplicacionget(num1, num2);
             // Assert = verificacion
             Assert.AreEqual(esperado, resultado);
 
@@ -78,15 +78,15 @@ namespace NUnitTestCalculadora
         //-----------------------------------------------------------
         // GET 2
         [Test]
-        public void TestRestaGET2()
+        public void TestMultiplicacionGET2()
         {
             // Arrange = preparacion
-            int num1 = -60;
-            int num2 = 20;
-            int esperado = -80;
+            int num1 = 11;
+            int num2 = 11;
+            int esperado = 121;
             CalculadoraController calc = new CalculadoraController();
             // Act = ejecucion
-            int resultado = calc.restaget(num1, num2);
+            int resultado = calc.multiplicacionget(num1, num2);
             // Assert = verificacion
             Assert.AreEqual(esperado, resultado);
 
@@ -94,21 +94,20 @@ namespace NUnitTestCalculadora
         //-----------------------------------------------------------
         // GET 3
         [Test]
-        public void TestRestaGET3()
+        public void TestMultiplicacionGET3()
         {
             // Arrange = preparacion
-            int num1 = 15;
-            int num2 = 20;
-            int esperado = -5;
+            int num1 = 8;
+            int num2 = 8;
+            int esperado = 64;
             CalculadoraController calc = new CalculadoraController();
             // Act = ejecucion
-            int resultado = calc.restaget(num1, num2);
+            int resultado = calc.multiplicacionget(num1, num2);
             // Assert = verificacion
             Assert.AreEqual(esperado, resultado);
 
         }
         //-----------------------------------------------------------
-        
 
     }
 }
